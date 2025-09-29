@@ -14,7 +14,7 @@ from agno.tools.exa import ExaTools
 
 
 # Hardcode your Google API key here
-GOOGLE_API_KEY = "AIzaSyBF9PVcu4XILF-VtjZ5AzxSbdIvpjTisIg" 
+GOOGLE_API_KEY = "gemini" 
 
 app = FastAPI(title="Shelfie API", description="Book Recommendation API")
 

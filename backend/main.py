@@ -27,11 +27,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Request model
 class RecommendationRequest(BaseModel):
     prompt: str
 
-# Response model
 class BookRecommendation(BaseModel):
     title: str
     author: str
@@ -43,7 +41,6 @@ class RecommendationResponse(BaseModel):
     books: list[BookRecommendation]
     message: str
 
-# Initialize the Shelfie agent
 def create_shelfie_agent():
     if not GOOGLE_API_KEY or GOOGLE_API_KEY == "YOUR_GOOGLE_API_KEY_HERE":
         raise RuntimeError("Please set your GOOGLE_API_KEY in main.py")
